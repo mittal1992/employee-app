@@ -1,0 +1,25 @@
+.row{
+    display: flex;
+    margin: 20px 0;
+}
+
+.col-2{
+    width: 16.50%;
+    text-align: center;
+    margin: auto;
+}
+
+.working{
+    color: white;
+    background-color: green;
+    border-radius: 20%;
+}
+
+button{
+    max-width: 25%;
+    margin: 0 10%;
+}
+
+img{
+    max-width: 100%;
+}

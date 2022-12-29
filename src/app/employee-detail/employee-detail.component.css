@@ -1,0 +1,31 @@
+.row{
+    display: flex;
+    margin: 20px 0;
+}
+
+.col-6{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.form-control{
+    width: 80%;
+}
+
+.right{
+    text-align: right !important;
+}
+
+button{
+    width: 30%;
+    margin: 0 5%;
+}
+
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

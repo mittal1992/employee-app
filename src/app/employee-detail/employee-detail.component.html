@@ -1,0 +1,104 @@
+<div>
+    <form (ngSubmit)="saveEmployeeInfo(empForm)" #empForm="ngForm">
+        <div class="row">
+            <div class="col-6 flex">
+                <div class="col-6 right">
+                    <label>
+                        Name:
+                    </label>
+                </div>
+                <div class="col-6">
+                    <input
+                    type="text"
+                    name="name"
+                    [ngModel]="employee.name"
+                    class="form-control"
+                    required
+                    >
+                </div>
+            </div>
+            <div class="col-6 flex">
+                <div class="col-6 right">
+                    <label>
+                        Title:
+                    </label>
+                </div>
+                <div class="col-6">
+                    <select
+                    name="title"
+                    [ngModel]="employee.title"
+                    class="form-control"
+                    required
+                    >
+                    <option *ngFor="let title of titles" [value]="title">{{title}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 flex">
+                <div class="col-6 right">
+                    <label>
+                        Age:
+                    </label>
+                </div>
+                <div class="col-6">
+                    <input
+                    type="number"
+                    name="age"
+                    [ngModel]="employee.age"
+                    class="form-control"
+                    required
+                    >
+                </div>
+            </div>
+            <div class="col-6 flex">
+                <div class="col-6 right">
+                    <label>
+                        Start Date:
+                    </label>
+                </div>
+                <div class="col-6">
+                    <input
+                    type="date"
+                    name="startDate"
+                    [ngModel]="employee.startDate | date:'yyyy-MM-dd'"
+                    class="form-control"
+                    required
+                >
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-6 flex">
+                <div class="col-6 right">
+                    <label>
+                        End Date:
+                    </label>
+                </div>
+                <div class="col-6">
+                    <input
+                    type="date"
+                    name="End Date"
+                    [ngModel]="employee.endDate | date:'yyyy-MM-dd'"
+                    class="form-control"
+                    >
+                </div>
+            </div>
+            <div class="col-6"></div>
+        </div>
+        
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6" style="text-align: right;">
+                <button type="submit" [disabled]="!(empForm.status === 'VALID')">
+                    Save
+                </button>
+                <button (click)="onCancel()">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

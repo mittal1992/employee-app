@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="heading">Employee List</div>
+    <hr>
+    <app-header></app-header>
+    <hr>
+    <app-filter></app-filter>
+    <div *ngFor="let employee of employees; let ind = index">
+        <hr style="border-top: 0.5px solid lightgray;">
+        <app-employee [employee]="employee" [index]="ind"></app-employee>
+    </div>
+    <hr>
+</div>

@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-2">#</div>
+    <div class="col-2">Name</div>
+    <div class="col-2">Job Title</div>
+    <div class="col-2">Age</div>
+    <div class="col-2">Start Date</div>
+    <div class="col-2">End Date</div>
+    <div class="col-2 flex">
+        <p>Action</p>
+        <button (click)="addEmployee()">
+            <img src="../../assets/icons/add-user.png">
+        </button>
+    </div>
+</div>
+
+<div *ngIf="add">
+    <app-employee-detail (editDisabled)="hideEmployeeAdd()" [mode]="'add'"></app-employee-detail>
+</div>

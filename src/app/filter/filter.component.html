@@ -1,0 +1,67 @@
+<div>
+    <form (ngSubmit)="filterEmployees(filterForm)" #filterForm="ngForm">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-2">
+                <div class="col-6">
+                    <input
+                    type="text"
+                    name="name"
+                    ngModel
+                    class="form-control"
+                    >
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="col-6">
+                    <select
+                    name="title"
+                    ngModel
+                    class="form-control"
+                    >
+                    <option *ngFor="let title of titles" [value]="title">{{title}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="col-6">
+                    <input
+                    type="number"
+                    name="age"
+                    ngModel
+                    class="form-control"
+                    >
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="col-6">
+                    <input
+                    type="date"
+                    name="startDate"
+                    ngModel
+                    class="form-control"
+                    required
+                >
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="col-6">
+                    <input
+                    type="date"
+                    name="endDate"
+                    class="form-control"
+                    ngModel
+                    >
+                </div>
+            </div>
+            <div class="col-2" style="text-align: right;">
+                <button type="submit">
+                    <img src="../../assets/icons/filter.png">
+                </button>
+                <button (click)="onCancel(filterForm)">
+                    <img src="../../assets/icons/close.png">
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

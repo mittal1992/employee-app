@@ -1,0 +1,23 @@
+.row{
+    display: flex;
+    margin: 20px 0;
+}
+
+.col-2{
+    width: 16.50%;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+button{
+    max-width: 25%;
+    margin-left: 10%;
+}
+
+img{
+    max-width: 100%;
+}
