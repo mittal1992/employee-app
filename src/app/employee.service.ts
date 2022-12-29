@@ -27,7 +27,15 @@ export class EmployeeService {
     }
   ];
 
+  titles = [
+    'Manager', 'Associate', 'Director', 'CEO', 'HR'
+  ];
+
   employeeSubject = new BehaviorSubject(this.employees);
+
+  getTitles(){
+    return this.titles;
+  }
 
   getEmployees(){
     return this.employees;

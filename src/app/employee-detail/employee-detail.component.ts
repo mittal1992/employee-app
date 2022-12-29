@@ -19,11 +19,10 @@ export class EmployeeDetailComponent implements OnInit {
   @Output() editDisabled = new EventEmitter<boolean>();
   
   today = new Date();
-  titles = [
-    'Manager', 'Associate', 'Director', 'CEO', 'HR'
-  ];
+  titles: string[] = [];
   
   ngOnInit(){
+    this.titles = this.employeeService.getTitles();
     if(!this.employee){
       this.employee = {
         name: '',
